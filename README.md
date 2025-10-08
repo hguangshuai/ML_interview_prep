@@ -20,8 +20,7 @@ ML design/
 │   ├── ml_system_design/     # 机器学习系统设计
 │   └── statistics/           # 统计学
 ├── projects/                  # 🚀 完整项目
-│   ├── ml_pipeline/          # ML Pipeline项目
-│   └── coding_challenges/    # 通用编程挑战
+│   └── pipeline_projects/    # ML Pipeline项目
 ├── tools/                     # 🛠️ 练习工具
 │   ├── question_generator.py # 随机问题生成器
 │   └── quiz_system.py        # 测验系统
@@ -42,7 +41,6 @@ ML design/
 
 #### 🤖 生成模型 (Generative Models)
 - [生成式 vs 判别式模型](topics/generative_models/generative_vs_discriminative.md) - 贝叶斯定理、实际对比
-- [Transformer实现挑战](topics/generative_models/coding_challenges/transformer_from_scratch/) - 从零实现完整Transformer
 
 #### 🧠 深度学习 (Deep Learning)
 - [深度学习基础概念](topics/deep_learning/basic_concepts.md) - 梯度消失、注意力机制、Transformer优势
@@ -78,7 +76,7 @@ ML design/
 - [完整ML Pipeline](projects/pipeline_projects/) - 端到端机器学习项目
 
 #### 💻 编程挑战
-- [通用编程挑战](projects/coding_challenges/) - 算法和数据结构
+- 编程挑战已移除，专注于理论学习
 
 ## ✨ 新结构优势
 
@@ -104,10 +102,6 @@ ls -la  # 查看所有相关文件
 
 # 阅读问题和答案
 cat generative_vs_discriminative.md
-
-# 运行编程挑战
-cd coding_challenges/transformer_from_scratch/
-python test_transformer.py
 ```
 
 ### 2. 随机练习
@@ -119,14 +113,7 @@ python tools/question_generator.py
 python tools/quiz_system.py
 ```
 
-### 3. 完整项目
-```bash
-# 运行ML Pipeline项目
-cd projects/ml_pipeline/
-python ml_pipeline.py --config config.yaml
-```
-
-### 4. 可视化学习
+### 3. 可视化学习
 ```bash
 # 运行可视化示例
 python examples/overfitting_underfitting_visualization.py
@@ -143,7 +130,7 @@ topics/statistics/        # 统计学基础
 ### 阶段2: 深度学习 (2-3周)
 ```
 topics/deep_learning/     # 深度学习理论
-topics/generative_models/ # 生成模型（包含Transformer实现）
+topics/generative_models/ # 生成模型理论
 ```
 
 ### 阶段3: 专业领域 (按需)
