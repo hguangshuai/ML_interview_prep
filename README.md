@@ -48,6 +48,13 @@ ML design/
 - [稀疏性与有效性](topics/regularization/sparsity_effectiveness.md) - 为什么L1稀疏、为什么正则化有效
 - [为什么使用L1/L2](topics/regularization/why_l1_l2_not_l3_l4.md) - L3/L4的问题、计算复杂度分析
 
+#### 📊 评估指标专题 (Metrics)
+- [Precision和Recall权衡](topics/metrics/precision_recall_tradeoff.md) - 精确率和召回率的权衡关系
+- [标签不平衡时的指标](topics/metrics/imbalanced_metrics.md) - 不平衡数据的评估指标选择
+- [分类问题指标选择](topics/metrics/classification_metrics_selection.md) - 如何选择合适的分类指标
+- [混淆矩阵详解](topics/metrics/confusion_matrix_detailed.md) - 混淆矩阵的分析和应用
+- [AUC概率解释](topics/metrics/auc_probability_interpretation.md) - AUC的概率含义和排序能力
+
 #### 🤖 生成模型 (Generative Models)
 - [生成式 vs 判别式模型](topics/generative_models/generative_vs_discriminative.md) - 贝叶斯定理、实际对比
 
