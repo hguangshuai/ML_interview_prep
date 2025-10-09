@@ -17,6 +17,26 @@
 4. **Dropout** - "随机遗忘"：训练时随机关闭一些神经元
 5. **交叉验证** - "多次测试"：用不同数据验证模型性能
 
+### 🎤 直接面试回答 (Direct Interview Answer)
+
+**To prevent overfitting, I implement multiple strategies that work together to improve model generalization:**
+
+**First, I use regularization techniques** - L1/L2 regularization to penalize large weights, forcing the model to learn simpler patterns. I apply dropout in neural networks to randomly disable neurons during training, preventing over-reliance on specific features.
+
+**Second, I implement early stopping** by monitoring validation loss during training and stopping when it starts increasing while training loss continues decreasing, indicating overfitting.
+
+**Third, I use cross-validation** with proper train/validation/test splits to get unbiased performance estimates and tune hyperparameters without data leakage.
+
+**Fourth, I apply data augmentation** to artificially increase training data diversity, helping the model learn more robust features rather than memorizing specific examples.
+
+**Fifth, I use ensemble methods** like bagging and boosting to reduce variance by combining multiple models trained on different data subsets.
+
+**Finally, I ensure proper feature selection** and dimensionality reduction to remove noise and irrelevant features that could lead to overfitting.
+
+**The key is combining these techniques based on the specific problem and monitoring validation performance throughout the process.**
+
+---
+
 ### 📝 英文标准面试答案 (English Interview Answer)
 
 #### 1. Definition and Detection

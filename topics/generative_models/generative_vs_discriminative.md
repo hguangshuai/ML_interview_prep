@@ -18,6 +18,22 @@
 - **方法**：直接学习P(Y|X)
 - **比喻**：直接画出一条分界线，不需要理解数据的生成过程
 
+### 🎤 直接面试回答 (Direct Interview Answer)
+
+**Generative models learn the joint probability distribution P(X,Y) of inputs and labels, then use Bayes' theorem to compute P(Y|X) for classification. Discriminative models directly learn the conditional probability P(Y|X) or the decision boundary between classes.**
+
+**The key mathematical relationship is:** `P(Y|X) = P(X|Y) × P(Y) / P(X)`. Generative models learn P(X|Y) and P(Y) separately, while discriminative models directly estimate P(Y|X).
+
+**Generative models like Naive Bayes and GANs can generate new data samples** because they understand the underlying data distribution. Discriminative models like logistic regression and SVMs focus solely on classification boundaries.
+
+**In practice, discriminative models often perform better for classification tasks** because they directly optimize for the classification objective. However, generative models are useful when you need to understand data generation, handle missing data, or generate new samples.
+
+**I choose generative models when I need to generate data or understand the underlying distribution**, and discriminative models when I only need accurate classification performance.
+
+**Examples:** Naive Bayes (generative) vs Logistic Regression (discriminative) for text classification, where logistic regression typically achieves better accuracy but Naive Bayes provides probability estimates and can handle missing features.
+
+---
+
 ### 英文标准面试答案
 
 #### Generative vs Discriminative Models

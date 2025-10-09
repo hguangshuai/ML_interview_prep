@@ -20,6 +20,22 @@
 - **结果**：训练误差低，测试误差高
 - **比喻**：像过度拟合，记住了所有细节包括噪声
 
+### 🎤 直接面试回答 (Direct Interview Answer)
+
+**The bias-variance tradeoff is a fundamental concept in machine learning that describes the relationship between model complexity and generalization error.**
+
+**Bias represents systematic error from oversimplified assumptions** - high bias means the model is too simple and consistently misses the true relationship, leading to underfitting. Variance represents sensitivity to training data fluctuations - high variance means the model overfits to training noise.
+
+**The mathematical relationship is:** `Total Error = Bias² + Variance + Irreducible Error`. As model complexity increases, bias decreases but variance increases, and vice versa.
+
+**I identify high bias when both training and test errors are high** with similar performance. High variance shows as low training error but high test error with a large gap between them.
+
+**To manage this tradeoff, I use cross-validation to find the optimal complexity point** where total error is minimized. Techniques like regularization, ensemble methods, and proper feature selection help balance bias and variance for better generalization.
+
+**In practice, I prefer slightly higher bias over high variance** because it's easier to reduce bias by adding complexity than to reduce variance in an overfitted model.
+
+---
+
 ### 英文标准面试答案
 
 #### 1. 基础定义 (Basic Definitions)

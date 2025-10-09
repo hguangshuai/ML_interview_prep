@@ -15,6 +15,22 @@
 2. **权重初始化**：权重太小，信号传播过程中衰减
 3. **网络太深**：层数越多，信号衰减越严重
 
+### 🎤 直接面试回答 (Direct Interview Answer)
+
+**The vanishing gradient problem occurs when gradients become exponentially small during backpropagation in deep networks, preventing effective training of deep layers.**
+
+**The mathematical cause is:** `∂L/∂W₁ = ∂L/∂W_L × ∏(i=1 to L-1) σ'(z_i) × W_i`. When activation function derivatives (like sigmoid's 0-0.25 range) and weights are consistently less than 1, their product decreases exponentially with depth.
+
+**I solve this using ReLU activation functions** which have constant gradient of 1 for positive inputs, preventing signal decay. I also use proper weight initialization like Xavier/He initialization to maintain gradient variance.
+
+**For very deep networks, I implement residual connections (ResNet)** that create direct paths for gradients to flow backward, bypassing the vanishing gradient issue entirely.
+
+**Batch normalization helps by normalizing inputs to each layer**, reducing internal covariate shift and allowing higher learning rates while maintaining gradient flow.
+
+**In practice, I combine these techniques** - ReLU + proper initialization + batch normalization + residual connections for training very deep networks effectively.
+
+---
+
 ### 📝 英文标准面试答案 (English Interview Answer)
 
 #### 1. Definition and Causes

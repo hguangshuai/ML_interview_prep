@@ -38,6 +38,8 @@ ML design/
 - [过拟合/欠拟合详解](topics/basic_ml/overfitting_underfitting.md) - 核心概念、检测方法、解决方案
 - [偏差-方差权衡](topics/basic_ml/bias_variance_tradeoff.md) - 数学原理、四种状态、实际应用
 - [过拟合预防手段](topics/basic_ml/overfitting_prevention.md) - 正则化、早停法、Dropout等
+- [模型比较评估](topics/basic_ml/model_comparison_evaluation.md) - 统计显著性检验、置信区间、效应大小分析
+- [正则化详解](topics/basic_ml/regularization_detailed.md) - L1 vs L2、Lasso vs Ridge、稀疏性原理、数学推导
 
 #### 🤖 生成模型 (Generative Models)
 - [生成式 vs 判别式模型](topics/generative_models/generative_vs_discriminative.md) - 贝叶斯定理、实际对比

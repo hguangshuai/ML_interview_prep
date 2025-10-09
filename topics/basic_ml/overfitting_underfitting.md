@@ -14,6 +14,20 @@
 - **结果**：无论训练还是测试都做不好
 - **比喻**：像只学了皮毛，没有深入理解
 
+### 🎤 直接面试回答 (Direct Interview Answer)
+
+**Overfitting occurs when a model learns the training data too well, including noise and outliers, causing poor performance on new data. Underfitting happens when a model is too simple to capture the underlying patterns, resulting in poor performance on both training and test data.**
+
+**I detect overfitting by monitoring the gap between training and validation performance** - if training accuracy is much higher than validation accuracy, the model is likely overfitting. For underfitting, both training and validation accuracies remain low with minimal gap.
+
+**The mathematical relationship is:** `Total Error = Bias² + Variance + Irreducible Error`. Overfitting increases variance (model is too sensitive to training data), while underfitting increases bias (model makes oversimplified assumptions).
+
+**To fix overfitting, I use regularization techniques like L1/L2, dropout, early stopping, or data augmentation.** For underfitting, I increase model complexity, add features, or reduce regularization.
+
+**In practice, I always use cross-validation to monitor these issues** and adjust model complexity accordingly. The goal is finding the sweet spot where the model generalizes well without memorizing training data.
+
+---
+
 ### 英文标准面试答案
 
 #### 1. 基础定义 (Basic Definitions)
