@@ -39,7 +39,14 @@ ML design/
 - [偏差-方差权衡](topics/basic_ml/bias_variance_tradeoff.md) - 数学原理、四种状态、实际应用
 - [过拟合预防手段](topics/basic_ml/overfitting_prevention.md) - 正则化、早停法、Dropout等
 - [模型比较评估](topics/basic_ml/model_comparison_evaluation.md) - 统计显著性检验、置信区间、效应大小分析
-- [正则化详解](topics/basic_ml/regularization_detailed.md) - L1 vs L2、Lasso vs Ridge、稀疏性原理、数学推导
+
+#### 🎯 正则化专题 (Regularization)
+- [正则化概述](topics/regularization/regularization_overview.md) - 正则化基础概念和综合理解
+- [L1 vs L2 正则化对比](topics/regularization/l1_vs_l2_comparison.md) - 惩罚函数、几何形状、应用场景
+- [Lasso/Ridge 先验分布](topics/regularization/lasso_ridge_priors.md) - Laplace vs Gaussian先验、贝叶斯解释
+- [Lasso/Ridge 数学推导](topics/regularization/lasso_ridge_derivation.md) - 坐标下降、软阈值、闭式解
+- [稀疏性与有效性](topics/regularization/sparsity_effectiveness.md) - 为什么L1稀疏、为什么正则化有效
+- [为什么使用L1/L2](topics/regularization/why_l1_l2_not_l3_l4.md) - L3/L4的问题、计算复杂度分析
 
 #### 🤖 生成模型 (Generative Models)
 - [生成式 vs 判别式模型](topics/generative_models/generative_vs_discriminative.md) - 贝叶斯定理、实际对比
