@@ -1,5 +1,13 @@
 # MSE做Loss的LogisticRegression是Convex Problem吗？
 
+## English Interview Answer
+No. Logistic Regression trained with Mean Squared Error (MSE) is generally a non‑convex optimization problem because the squared error composed with the sigmoid makes the Hessian not positive semi‑definite everywhere. Cross‑Entropy (negative log-likelihood) yields a convex objective in the weights for binary logistic regression.
+
+## 中文知识点解释（含英文术语标注）
+- 结论：用均方误差（MSE, Mean Squared Error）训练二分类的逻辑回归（Logistic Regression）通常是**非凸（non‑convex）**。
+- 原因：MSE 与 Sigmoid 复合后，其 Hessian（海森矩阵，Hessian）可能出现负特征值，无法保证半正定（positive semi-definite, PSD）。
+- 对比：交叉熵损失（Cross‑Entropy, Negative Log-Likelihood）对应的 Hessian = Xᵀdiag(p(1−p))X，半正定，故目标对参数为**凸（convex）**。
+
 ## 答案
 
 **不是。**用MSE做loss的LogisticRegression是**non-convex problem**。

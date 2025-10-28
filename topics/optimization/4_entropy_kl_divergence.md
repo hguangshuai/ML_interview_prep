@@ -1,5 +1,14 @@
 # 相对熵/交叉熵以及K-L散度
 
+## English Interview Answer
+Entropy measures uncertainty, H(P) = −Σ p log p. Cross‑Entropy H(P,Q) = −Σ p log q, and KL Divergence KL(P||Q) = Σ p log(p/q) = H(P,Q) − H(P). In classification, minimizing Cross‑Entropy is equivalent to minimizing KL(P||Q) and to maximizing likelihood.
+
+## 中文知识点解释（含英文术语标注）
+- 熵（Entropy）：不确定性度量；概率越均匀，熵越大。
+- 交叉熵（Cross‑Entropy）：真实分布 P 与模型分布 Q 的距离度量 H(P,Q)；训练中最常用的分类损失。
+- 相对熵/散度（KL Divergence, Kullback‑Leibler）：KL(P||Q) = H(P,Q) − H(P)，非对称（asymmetric），不是度量（metric）。
+- 分类训练：最小化交叉熵 ⇔ 最小化 KL(P||Q) ⇔ 最大似然（Maximum Likelihood）。
+
 ## 核心概念
 
 ### 熵 (Entropy)

@@ -1,5 +1,13 @@
 # DecisionTree Split的优化目标
 
+## English Interview Answer
+Decision trees choose splits that maximize impurity reduction: e.g., maximize Information Gain (entropy reduction) or Gini Gain for classification, and minimize weighted MSE for regression. Practically, evaluate all candidate thresholds and pick the one with the largest impurity decrease.
+
+## 中文知识点解释（含英文术语标注）
+- 分类：最大化信息增益（Information Gain，熵减少 Entropy reduction）或基尼增益（Gini Gain）。
+- 回归：最小化加权均方误差（weighted MSE）。
+- 实践：遍历候选阈值（candidate thresholds），选择使**不纯度（impurity）**下降最大的分裂。
+
 ## 核心答案
 
 **决策树split节点的优化目标是最大化信息增益或最小化不纯度**

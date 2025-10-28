@@ -1,5 +1,13 @@
 # LogisticRegression的Loss推导
 
+## English Interview Answer
+Binary logistic regression uses the Cross‑Entropy (negative log‑likelihood) loss derived from a Bernoulli model with a sigmoid link. The gradient simplifies to ∇L = Xᵀ(ŷ − y). Cross‑Entropy avoids the vanishing‑gradient issue that arises when using MSE with a sigmoid.
+
+## 中文知识点解释（含英文术语标注）
+- 损失：交叉熵（Cross‑Entropy, Negative Log‑Likelihood），源自伯努利（Bernoulli）似然与 Sigmoid 链接（link）。
+- 梯度：∇L = Xᵀ(ŷ − y)，形式简洁、数值稳定。
+- 对比：MSE + Sigmoid 易出现梯度消失（vanishing gradient），优化缓慢；交叉熵收敛更快、凸性更好。
+
 ## 核心答案
 
 **LogisticRegression使用Cross-Entropy Loss（二元交叉熵）**

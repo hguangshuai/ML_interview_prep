@@ -1,5 +1,13 @@
 # SVM的Loss是什么
 
+## English Interview Answer
+SVM minimizes the Hinge Loss with an L2 regularizer to maximize the margin: min Σ max(0, 1 − y f(x)) + λ||w||². Only support vectors contribute to the loss/gradient, yielding a sparse solution and a convex optimization problem.
+
+## 中文知识点解释（含英文术语标注）
+- 损失：合页损失（Hinge Loss）= max(0, 1 − y·f(x))，配合 L2 正则（L2 regularization）。
+- 目标：最大间隔（maximum margin），只由支持向量（support vectors）决定。
+- 性质：凸优化（convex optimization），解具稀疏性（sparsity）。
+
 ## 核心答案
 
 **SVM使用Hinge Loss，目标是最大化分类间隔**

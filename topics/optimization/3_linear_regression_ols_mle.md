@@ -1,5 +1,13 @@
 # LinearRegression最小二乘法和MLE的关系
 
+## English Interview Answer
+Under i.i.d. Gaussian noise, Ordinary Least Squares (OLS) is equivalent to Maximum Likelihood Estimation (MLE): maximizing the Gaussian likelihood is identical to minimizing the sum of squared errors, yielding the same closed‑form estimator β̂ = (XᵀX)⁻¹Xᵀy.
+
+## 中文知识点解释（含英文术语标注）
+- 结论：在独立同分布高斯噪声（i.i.d. Gaussian noise）假设下，最小二乘（OLS, Ordinary Least Squares）与最大似然估计（MLE, Maximum Likelihood Estimation）**等价**。
+- 机理：高斯对数似然（log‑likelihood）最大化 ⇔ 残差平方和（SSE, Sum of Squared Errors）最小化。
+- 区别：σ² 的估计量不同（MLE 有偏，OLS 无偏校正）。
+
 ## 核心答案
 
 **在正态分布误差的假设下，最小二乘法(OLS)等价于最大似然估计(MLE)。**

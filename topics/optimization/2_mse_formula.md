@@ -1,5 +1,14 @@
 # MSE公式解释及使用场景
 
+## English Interview Answer
+Mean Squared Error (MSE) is the average of squared residuals: MSE = (1/n) Σ (y − ŷ)². It is appropriate for regression with approximately Gaussian noise, is convex and differentiable, but is sensitive to outliers. RMSE is its square root, in the original units.
+
+## 中文知识点解释（含英文术语标注）
+- 定义：均方误差（MSE, Mean Squared Error）= 残差平方（squared residuals）的平均。
+- 适用：回归（regression）且噪声近似高斯（Gaussian noise）。
+- 性质：凸（convex）、处处可微（differentiable everywhere）、对异常值敏感（outlier‑sensitive）。
+- RMSE（Root MSE）：开平方，单位与目标一致，更易解释。
+
 ## MSE的定义
 
 **均方误差(Mean Squared Error, MSE)** 是回归问题中最常用的损失函数之一。

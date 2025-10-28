@@ -1,5 +1,14 @@
 # 多分类Cross-Entropy
 
+## English Interview Answer
+For multi‑class logistic regression, the Softmax + Cross‑Entropy loss is used: L = −Σ y_k log ŷ_k. It is the negative log‑likelihood under a categorical (multinomial) model, equivalent to minimizing KL(y||ŷ), with stable gradients and probabilistic interpretation.
+
+## 中文知识点解释（含英文术语标注）
+- Softmax：将 logits 变为概率分布（probability distribution）。
+- 多分类交叉熵（Multi‑Class Cross‑Entropy）：L = −Σ y_k log ŷ_k，对应类别分布的负对数似然（negative log‑likelihood）。
+- 等价性：最小化交叉熵 ⇔ 最小化 KL(y||ŷ) ⇔ 最大似然（Maximum Likelihood）。
+- 优点：梯度稳定（stable gradients）、有概率解释（probabilistic interpretation）。
+
 ## 核心答案
 
 **Multi-Class LogisticRegression使用Multi-Class Cross-Entropy Loss**
