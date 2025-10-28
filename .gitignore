@@ -65,3 +65,9 @@ Thumbs.db
 # Model files (if too large)
 *.model
 *.weights
+# Local docs ignored
+DEVELOPMENT_GUIDELINES.md
+ML_coding.md
+IMAGE_MANAGEMENT_SUMMARY.md
+PROJECT_SUMMARY.md
+USER_WORKFLOW_STANDARDS.md
