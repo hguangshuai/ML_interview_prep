@@ -52,11 +52,17 @@ softmax_crossentropy_geometry.png
 
 ### 3. 单文件内容结构（每个问题一个 .md）
 
-建议包含以下部分：
+建议包含以下部分（强制双语要求）：
 ```
 # {问题标题}
 
-## 答案概要（中英皆可，简洁）
+## English Interview Answer
+- Clear, concise, directly answer the question
+- Include equations/assumptions as needed
+
+## 中文知识点解释（含英文术语标注）
+- 用中文阐述关键概念与直觉（intuition）
+- 关键术语附英文：如“交叉熵 (Cross-Entropy)”、“相对熵/散度 (KL Divergence)”
 
 ## 详细推导/解释
 - 数学公式与要点
@@ -69,6 +75,10 @@ softmax_crossentropy_geometry.png
 
 ## 面试要点（Bullet）
 ```
+
+说明：
+- “English Interview Answer”为正式面试作答版本，要求逻辑清晰、要点明确。
+- “中文知识点解释”用于加深理解，关键名词需标注英文原词，便于双语切换与检索。
 
 注意：图片相对路径优先指向 `topics/{topic}/images/`。
 
