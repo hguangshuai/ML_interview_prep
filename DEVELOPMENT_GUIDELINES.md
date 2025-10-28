@@ -1,232 +1,164 @@
-# 🛠️ 开发规范文档
+# 🛠️ 开发规范文档（Topics-first）
 
 ## 📋 项目开发规范
 
+本项目采用“按主题归档”的内容组织方式：所有问题与答案、配图、示例代码都放在 `topics/{topic}/` 子目录中；不再使用 `questions/` 与 `answers/` 的双目录结构。
+
 ### 1. 文件组织结构
 
-#### 问题文件
 ```
-questions/
-├── {category}/              # 技术分类
-│   └── {topic_name}.md     # 具体问题文件
-```
-
-**示例：**
-```
-questions/
-├── basic_ml/
-│   ├── overfitting_underfitting.md
-│   ├── bias_variance_tradeoff.md
-│   └── cross_validation.md
-├── deep_learning/
-│   ├── neural_networks.md
-│   ├── backpropagation.md
-│   └── activation_functions.md
+ML design/
+└── topics/
+    ├── basic_ml/
+    │   ├── overfitting_underfitting.md
+    │   ├── bias_variance_tradeoff.md
+    │   └── overfitting_prevention.md
+    ├── optimization/
+    │   ├── 1_mse_logistic_regression_convex.md
+    │   ├── 2_mse_formula.md
+    │   └── ...
+    ├── generative_models/
+    │   └── generative_vs_discriminative.md
+    └── ...
 ```
 
-#### 答案文件
+可选的配图与代码：
 ```
-answers/
-├── {category}/              # 与技术分类对应
-│   └── {topic_name}.md     # 与问题文件对应
+topics/{topic}/images/                 # 该主题下的配图（推荐）
+topics/{topic}/coding_challenges/      # 该主题相关的代码/挑战（可选）
 ```
 
-#### 图片文件
-```
-images/
-├── {category}/              # 与技术分类对应
-│   ├── {topic_name}_analysis.png
-│   ├── {topic_name}_visualization.png
-│   └── {topic_name}_architecture.png
-```
+全局共享图片也可放在根目录 `images/` 下（少量通用配图）。
 
 ### 2. 命名规范
 
-#### 文件命名
-- 使用小写字母和下划线
-- 使用描述性名称
-- 保持一致性
+#### 文档命名
+- 全小写 + 下划线或数字前缀，表达清晰、顺序明确
+- 单题单文件，文件名体现问题要点
 
-**示例：**
+示例：
 ```
-✅ 正确: overfitting_underfitting.md
-✅ 正确: attention_mechanism.md
-✅ 正确: gradient_descent_optimization.md
-
-❌ 错误: Overfitting.md
-❌ 错误: attention-mechanism.md
-❌ 错误: question1.md
+overfitting_underfitting.md
+1_mse_logistic_regression_convex.md
+generative_vs_discriminative.md
 ```
 
 #### 图片命名
-- 使用描述性名称
-- 包含分析类型
-- 使用.png或.jpg格式
-
-**示例：**
+- `{主题或问题名}_{用途}.png`，如：
 ```
-✅ 正确: overfitting_underfitting_analysis.png
-✅ 正确: attention_weights_visualization.png
-✅ 正确: model_architecture_diagram.png
+overfitting_underfitting_analysis.png
+softmax_crossentropy_geometry.png
 ```
 
-### 3. 内容规范
+### 3. 单文件内容结构（每个问题一个 .md）
 
-#### 问题文件结构
-```markdown
-# {技术领域}问题
+建议包含以下部分：
+```
+# {问题标题}
 
-## 问题1: {问题标题}
+## 答案概要（中英皆可，简洁）
 
-{问题描述}
+## 详细推导/解释
+- 数学公式与要点
+- 直觉理解（intuition）
 
-### 背景
-{背景信息}
+## 代码示例（可选）
 
-### 要求
-{具体要求}
+## 可视化/配图（可选）
+![描述](images/{descriptive_name}.png)
 
-### 难度
-{初级/中级/高级}
+## 面试要点（Bullet）
 ```
 
-#### 答案文件结构
-```markdown
-# {技术领域}问题 - 详细答案
+注意：图片相对路径优先指向 `topics/{topic}/images/`。
 
-## 问题1: {问题标题}
+### 4. 工作流规范
 
-### 中文理解
-{中文解释，便于记忆}
+#### A. 机器学习/AI 题库工作流（topics）
+1. 选择或创建主题目录：`topics/{topic}/`
+2. 每个问题创建一个 `*.md` 文件；必要时在 `images/` 放入图示
+3. 完成后，在根 `README.md` 的相应章节加入该文件的超链接
+4. 如涉及示例代码，可在该主题下新建 `coding_challenges/`
 
-### 英文标准面试答案
-{英文标准回答}
+#### B. Coding Practice（Notebook）
+1. 在 `ml_coding_practice/` 下为每个练习主题新建 `*.ipynb`
+2. Notebook 要包含：题目说明、思路要点、从零实现、测试用例、复杂度讨论
+3. 如与某个 `topics/{topic}` 强相关，可在 README 中相互链接
 
-### 数学原理
-{相关数学公式和推导}
+#### C. LC.ipynb（Python 操作速查）
+1. `LC.ipynb` 专门用于记录“不熟悉的 Python 用法/函数”
+2. 我给出一个函数名/用法，你在该 Notebook 中添加：
+   - 场景描述（什么时候用）
+   - 最小可复现实例（输入/输出）
+   - 注意事项/坑点
+3. 按模块加目录（如：内置函数、itertools、collections、numpy、pandas等）
 
-### 代码示例
-{实际代码演示}
+### 5. 图片管理规范
 
-### 可视化
-![图片描述](../images/{category}/image_name.png)
-
-### 面试常见问题
-{Follow-up问题}
-
-### 关键要点
-{总结要点}
+#### 引用与生成
+```
+![图片描述](images/{descriptive_name}.png)
 ```
 
-### 4. 图片管理规范
-
-#### 图片引用格式
-```markdown
-![图片描述](../images/{category}/image_name.png)
+生成示例：
+```
+plt.savefig('topics/{topic}/images/{descriptive_name}.png', dpi=300, bbox_inches='tight')
 ```
 
-#### 图片生成脚本
-```python
-# 保存到正确目录
-plt.savefig(f'images/{category}/{topic_name}_{analysis_type}.png', 
-            dpi=300, bbox_inches='tight')
-```
+### 6. 代码与注释规范
+- 遵循 PEP 8
+- 注释用英文；解释必要的“为什么”（rationale）
+- 给出最小可运行示例；避免无用样板
 
-### 5. 代码规范
+### 7. 文档规范
+- 根 `README.md` 维护主题导航与超链接
+- 每个主题下的文档自包含（读者只看该文件即可理解问题）
 
-#### Python代码
-- 使用PEP 8规范
-- 添加详细注释
-- 包含错误处理
-- 提供使用示例
+## 🎯 开发流程（一览）
 
-#### 测试代码
-- 包含单元测试
-- 提供集成测试
-- 性能基准测试
-- 清晰的测试报告
+### 新增一个 ML/AI 问题
+1. 在 `topics/{topic}/` 下新建 `question.md`
+2. 补充图示至 `topics/{topic}/images/`（如需要）
+3. 在根 `README.md` 的对应主题加入超链接
+4. `git add` → `git commit` → `git push`
 
-### 6. 文档规范
+### 新增一个 Coding Practice 练习
+1. 在 `ml_coding_practice/` 下新建 `your_topic.ipynb`
+2. 包含从零实现与测试；在 `README.md` 添加入口链接
+3. `git add` → `git commit` → `git push`
 
-#### README文件
-- 清晰的项目介绍
-- 详细的使用说明
-- 完整的安装指南
-- 贡献指南
-
-#### 代码注释
-- 函数和类的文档字符串
-- 复杂逻辑的行内注释
-- 参数和返回值说明
-- 使用示例
-
-## 🎯 开发流程
-
-### 1. 添加新问题
-1. 在 `questions/{category}/` 创建问题文件
-2. 在 `answers/{category}/` 创建对应答案文件
-3. 生成相关图片并保存到 `images/{category}/`
-4. 在答案文件中引用图片
-5. 测试问题生成器功能
-
-### 2. 添加编程挑战
-1. 在 `coding_challenges/` 创建新目录
-2. 实现核心代码
-3. 编写测试用例
-4. 创建README说明文档
-5. 添加示例和扩展挑战
-
-### 3. 更新Pipeline
-1. 修改配置文件
-2. 更新相关模块
-3. 测试完整流程
-4. 更新文档
+### 补充 LC.ipynb 用法示例
+1. 在 `LC.ipynb` 新增一个函数/用法的条目
+2. 编写最小可运行例子与注意事项
+3. `git add` → `git commit` → `git push`
 
 ## 📝 检查清单
 
 ### 添加新内容时：
-- [ ] 文件放在正确目录
-- [ ] 使用规范的文件名
-- [ ] 内容结构完整
-- [ ] 图片正确引用
-- [ ] 代码可以运行
-- [ ] 测试通过
+- [ ] 放在正确的 `topics/{topic}/` 或 `ml_coding_practice/`
+- [ ] 使用清晰的文件/图片命名
+- [ ] 文档结构完整（概要/推导/要点/可选图与代码）
+- [ ] README.md 已添加/更新超链接
+- [ ] 代码/Notebook 可运行
 
 ### 维护时：
-- [ ] 检查链接有效性
-- [ ] 更新过时内容
-- [ ] 保持格式一致
-- [ ] 优化文件大小
+- [ ] 定期检查链接有效性
+- [ ] 统一风格与命名
+- [ ] 移除或合并冗余内容
 
-## 🔧 工具推荐
+## 🔧 工具与质量
+- 版本控制：Git（小步提交，信息清晰）
+- 代码检查：flake8 / ruff（可选）
+- 绘图：Matplotlib / Seaborn / Plotly
+- Notebook 规范：分节清晰、单元可运行、结果可复现
 
-### 开发工具
-- **编辑器**: VS Code, PyCharm
-- **版本控制**: Git
-- **文档**: Markdown
-- **图表**: Matplotlib, Seaborn, Plotly
+## 📚 参考
+- PEP 8: https://pep8.org/
+- Markdown: https://www.markdownguide.org/
+- Matplotlib: https://matplotlib.org/
 
-### 质量保证
-- **代码检查**: flake8, black
-- **测试**: pytest
-- **文档**: Sphinx
-- **图片**: GIMP, Inkscape
-
-## 📚 参考资源
-
-### 技术文档
-- [PEP 8 - Python代码规范](https://pep8.org/)
-- [Markdown语法](https://www.markdownguide.org/)
-- [Matplotlib文档](https://matplotlib.org/)
-
-### 最佳实践
-- 保持代码简洁
-- 文档及时更新
-- 测试覆盖完整
-- 图片质量清晰
-
-遵循这些规范可以确保项目的：
-1. **一致性**: 所有内容格式统一
-2. **可维护性**: 结构清晰，易于维护
-3. **可扩展性**: 便于添加新内容
-4. **专业性**: 符合行业标准
+遵循以上规范可以确保：
+1. **一致性**：统一的 topics-first 结构
+2. **可维护性**：主题自包含，导航清晰
+3. **可扩展性**：便于新增主题与练习
+4. **效率**：标准化流程，连接 README，快速同步 GitHub
