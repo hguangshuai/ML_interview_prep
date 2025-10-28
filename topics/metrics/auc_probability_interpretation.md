@@ -469,3 +469,4 @@ AUC values are interpreted as ranking ability: AUC = 1.0 means perfect ranking (
 5. **对比练习**: 比较AUC与其他指标
 
 **记住**: AUC衡量的是模型的排序能力，是随机选一对样本时正样本排名更高的概率！
+
