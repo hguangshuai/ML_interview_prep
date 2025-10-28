@@ -19,6 +19,8 @@ ML design/
 │   ├── computer_vision/      # 计算机视觉
 │   ├── ml_system_design/     # 机器学习系统设计
 │   └── statistics/           # 统计学
+├── ml_coding_practice/        # 💻 ML编程练习笔记本
+│   ├── *.ipynb              # 按主题分类的编程练习notebooks
 ├── projects/                  # 🚀 完整项目
 │   └── pipeline_projects/    # ML Pipeline项目
 ├── tools/                     # 🛠️ 练习工具
@@ -27,7 +29,8 @@ ML design/
 ├── examples/                  # 📊 可视化示例
 ├── interview_guides/          # 📖 面试指南
 ├── resources/                 # 📚 学习资源
-└── images/                   # 🖼️ 共享图片资源
+├── images/                   # 🖼️ 共享图片资源
+└── ML_coding.md              # 📋 ML编程面试准备指南
 ```
 
 ## 📚 学习资料导航
@@ -55,7 +58,7 @@ ML design/
 - [混淆矩阵详解](topics/metrics/confusion_matrix_detailed.md) - 混淆矩阵的分析和应用
 - [AUC概率解释](topics/metrics/auc_probability_interpretation.md) - AUC的概率含义和排序能力
 
-#### 🤖 生成模型 (Generative Models)
+#### 🤖 生成模型 (Generative Models)  
 - [生成式 vs 判别式模型](topics/generative_models/generative_vs_discriminative.md) - 贝叶斯定理、实际对比
 
 #### 🧠 深度学习 (Deep Learning)
@@ -66,6 +69,16 @@ ML design/
 
 #### 👁️ 计算机视觉 (Computer Vision)
 - 即将添加...
+
+#### ⚙️ 优化理论 (Optimization)
+- [MSE做Loss的LogisticRegression是Convex吗?](topics/optimization/1_mse_logistic_regression_convex.md) - 凸性问题分析
+- [MSE公式及使用场景](topics/optimization/2_mse_formula.md) - 均方误差详解
+- [LinearRegression的OLS和MLE关系](topics/optimization/3_linear_regression_ols_mle.md) - 最小二乘法与最大似然估计
+- [熵、交叉熵和K-L散度](topics/optimization/4_entropy_kl_divergence.md) - 信息论基础
+- [LogisticRegression的Loss推导](topics/optimization/5_logistic_regression_loss.md) - 损失函数推导
+- [SVM的Loss](topics/optimization/6_svm_loss.md) - Hinge Loss详解
+- [Multi-Class Cross-Entropy](topics/optimization/7_multiclass_crossentropy.md) - 多分类损失函数
+- [Decision Tree的分裂优化目标](topics/optimization/8_decision_tree_splitting.md) - 信息增益与基尼不纯度
 
 #### 🏗️ 机器学习系统设计 (ML System Design)
 - 即将添加...
@@ -82,6 +95,16 @@ ML design/
 #### 🎲 练习工具
 - [随机问题生成器](tools/question_generator.py) - 智能出题系统
 - [测验系统](tools/quiz_system.py) - 交互式练习
+
+#### 💻 编程练习 (ML Coding Practice)
+- [ML编程面试准备](ML_coding.md) - 全面的编程面试准备指南
+- [编程练习笔记本](ml_coding_practice/) - 按主题分类的编程练习notebooks
+  - 核心算法实现 (Linear/Logistic Regression, KNN, Decision Tree等)
+  - 评估指标和交叉验证
+  - 向量化和数据处理
+  - 推荐系统和检索
+  - 深度学习和Transformer
+  - 系统设计和工程实践
 
 #### 📖 面试指南
 - [过拟合/欠拟合面试指南](interview_guides/overfitting_underfitting_guide.md) - 面试准备要点
